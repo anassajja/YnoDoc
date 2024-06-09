@@ -1,0 +1,77 @@
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.calendar th {
+    background-color: #007BFF; /* Blue */
+    color: white;
+}
+
+.calendar td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+}
+
+.calendar td:hover {
+    background-color: #e8e8e8;
+}
+
+td.available {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.schedule.accepted {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.schedule.declined {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+td, th {
+    width: 14.28%; /* 100% / 7 days */
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+td.empty {
+    background-color: #eee;
+}
+
+.calendar td.status-available {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    cursor: pointer; /* Change cursor to pointer when hovering */
+}
+.calendar td.status-available:hover {
+    background-color: #65ff6d; /* Darker green */
+}
+
+td.status-orange {
+    background-color: #FFA500; /* Orange */
+    color: white;
+}
+
+td.status-yellow {
+    background-color: #FFFF00; /* Yellow */
+    color: black;
+}
+
+td.status-red {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+.status-orange, .schedule.declined, .status-yellow, .status-red {
+    pointer-events: none; /* Prevent hovering */
+}
